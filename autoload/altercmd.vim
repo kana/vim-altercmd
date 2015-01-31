@@ -37,7 +37,7 @@ function! altercmd#define(...)  "{{{2
   let original_name_tail = ' ' . original_name_tail
   for i in range(len(original_name_tail))
     let lhs = original_name_head . original_name_tail[1:i]
-    execute 'cnoreabbrev <expr>' lhs
+    execute 'cnoreabbrev <expr>' buffer lhs
     \ '(getcmdtype() == ":" && getcmdline() ==# "' . lhs  . '")'
     \ '?' ('"' . alternate_name . '"')
     \ ':' ('"' . lhs . '"')
