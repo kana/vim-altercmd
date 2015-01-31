@@ -1,8 +1,8 @@
 *altercmd.txt*	Alter built-in Ex commands by your own ones
 
-Version 0.0.0
+Version 0.0.1
 Script ID: 2675
-Copyright (C) 2009 kana <http://whileimautomaton.net/>
+Copyright (C) 2009-2015 Kana Natsuno <http://whileimautomaton.net/>
 License: MIT license  {{{
     Permission is hereby granted, free of charge, to any person obtaining
     a copy of this software and associated documentation files (the
@@ -63,10 +63,7 @@ Requirements:
 - Vim 7.2 or later
 
 Latest version:
-http://github.com/kana/config/commits/vim-altercmd
-
-Document in HTML format:
-http://kana.github.com/config/vim/altercmd.html
+https://github.com/kana/vim-altercmd
 
 
 
@@ -123,6 +120,9 @@ BUGS						*altercmd-bugs*
 
 ==============================================================================
 CHANGELOG					*altercmd-changelog*
+
+0.0.1	2015-01-31T23:52:24+09:00
+	- Fix a bug that buffer-local |:AlterCommand| could not be defined.
 
 0.0.0	2009-06-14T03:47:25+09:00
 	- Initial version.
