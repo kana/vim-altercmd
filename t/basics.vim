@@ -23,4 +23,23 @@ describe 'altercmd#define'
     call Test('abb', 'A-B-B-R')
     call Test('abbr', 'A-B-B-R')
   end
+
+  it 'supports <buffer>'
+    silent edit 'test-A'
+    call altercmd#define('<buffer>', 'ctx', 'Axe')
+    silent edit 'test-B'
+    call altercmd#define('<buffer>', 'ctx', 'Bow')
+    silent edit 'test-C'
+    call altercmd#define('<buffer>', 'ctx', 'Club')
+
+    silent edit 'test-A'
+    call Test('full', 'F-U-L-L')
+    call Test('ctx', 'Axe')
+    silent edit 'test-B'
+    call Test('full', 'F-U-L-L')
+    call Test('ctx', 'Bow')
+    silent edit 'test-C'
+    call Test('full', 'F-U-L-L')
+    call Test('ctx', 'Club')
+  end
 end
