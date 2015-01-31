@@ -124,6 +124,9 @@ BUGS						*altercmd-bugs*
 ==============================================================================
 CHANGELOG					*altercmd-changelog*
 
+0.0.1	2015-01-31T23:52:24+09:00
+	- Fix a bug that buffer-local |:AlterCommand| could not be defined.
+
 0.0.0	2009-06-14T03:47:25+09:00
 	- Initial version.
 
