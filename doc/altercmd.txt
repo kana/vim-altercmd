@@ -1,6 +1,6 @@
 *altercmd.txt*	Alter built-in Ex commands by your own ones
 
-Version 0.0.0
+Version 0.0.1
 Script ID: 2675
 Copyright (C) 2009-2015 Kana Natsuno <http://whileimautomaton.net/>
 License: MIT license  {{{
