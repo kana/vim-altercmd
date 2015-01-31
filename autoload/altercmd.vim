@@ -23,9 +23,8 @@
 " }}}
 " Interface  "{{{1
 function! altercmd#define(...)  "{{{2
-  let buffer_p = (a:000[0] ==? '<buffer>')
-  let original_name = a:000[buffer_p ? 1 : 0]
-  let alternate_name = a:000[buffer_p ? 2 : 1]
+  let [buffer, original_name, alternate_name]
+  \ = (a:000[0] ==? '<buffer>' ? [] : ['']) + a:000
 
   if original_name =~ '\['
     let [original_name_head, original_name_tail] = split(original_name, '[')
@@ -38,7 +37,7 @@ function! altercmd#define(...)  "{{{2
   let original_name_tail = ' ' . original_name_tail
   for i in range(len(original_name_tail))
     let lhs = original_name_head . original_name_tail[1:i]
-    execute 'cnoreabbrev <expr>' lhs
+    execute 'cnoreabbrev <expr>' buffer lhs
     \ '(getcmdtype() == ":" && getcmdline() ==# "' . lhs  . '")'
     \ '?' ('"' . alternate_name . '"')
     \ ':' ('"' . lhs . '"')
