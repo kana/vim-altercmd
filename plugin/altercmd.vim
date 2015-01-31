@@ -1,6 +1,6 @@
 " altercmd - Alter built-in Ex commands by your own ones
 " Version: 0.0.0
-" Copyright (C) 2009 kana <http://whileimautomaton.net/>
+" Copyright (C) 2009-2015 Kana Natsuno <http://whileimautomaton.net/>
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
